@@ -1,2 +1,12 @@
-package com.codegym.service;public interface ExpenseService {
+package com.codegym.service;
+
+import com.codegym.model.Expense;
+
+import java.util.Optional;
+
+public interface ExpenseService {
+    Iterable<Expense> findAllByUserId(Long userId);
+    Optional<Expense> findById(Long id);
+    Expense save(Expense expense);
+    void deleteById(Long id);
 }
